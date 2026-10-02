@@ -1,0 +1,104 @@
+@startuml HotelCRM_UseCaseDiagram
+
+left to right direction
+
+skinparam usecase {
+    BackgroundColor #f8f9fa
+    BorderColor #6c757d
+    ArrowColor #007bff
+}
+
+actor SuperAdmin as SA
+actor Admin as A
+actor Manager as M
+actor Staff as S
+actor Guest as G
+
+rectangle "Hotel CRM System" {
+    usecase "View Dashboard" as UC1
+    usecase "Manage Tenants" as UC2
+    usecase "Manage Billing" as UC3
+    usecase "System Administration" as UC4
+    usecase "Manage Guests" as UC5
+    usecase "Manage Reservations" as UC6
+    usecase "View Reports" as UC7
+    usecase "Manage Staff" as UC8
+    usecase "Manage Supplies" as UC9
+    usecase "Approve Supply Requests" as UC10
+    usecase "Manage Promotions & Loyalty" as UC11
+    usecase "System Settings" as UC12
+    usecase "View KPI Reports" as UC13
+    usecase "Handle Feedback & Complaints" as UC14
+    usecase "Handle Guest Interactions" as UC15
+    usecase "Process Guest Requests" as UC16
+    usecase "Request Supplies" as UC17
+    usecase "Login/Register" as UC18
+    usecase "Browse Hotel Info" as UC19
+    usecase "Make Reservations" as UC20
+    usecase "View Booking Status" as UC21
+}
+
+SA --> UC1
+SA --> UC2
+SA --> UC3
+SA --> UC4
+
+A --> UC1
+A --> UC5
+A --> UC6
+A --> UC7
+A --> UC8
+A --> UC9
+A --> UC10
+A --> UC11
+A --> UC12
+
+M --> UC1
+M --> UC5
+M --> UC6
+M --> UC13
+M --> UC9
+M --> UC10
+M --> UC14
+
+S --> UC1
+S --> UC5
+S --> UC6
+S --> UC15
+S --> UC16
+S --> UC14
+S --> UC17
+
+G --> UC18
+G --> UC19
+G --> UC20
+G --> UC21
+
+UC20 ..> UC18 : <<include>>
+
+note right of SA
+  System-level
+  management
+end note
+
+note right of A
+  Hotel
+  administration
+end note
+
+note right of M
+  Operations
+  management
+end note
+
+note right of S
+  Front-line
+  operations
+end note
+
+note right of G
+  Unauthenticated
+  users
+end note
+
+@enduml

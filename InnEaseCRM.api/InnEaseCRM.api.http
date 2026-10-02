@@ -1,0 +1,6 @@
+@InnEaseCRM.api_HostAddress = http://localhost:5274
+
+GET {{InnEaseCRM.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

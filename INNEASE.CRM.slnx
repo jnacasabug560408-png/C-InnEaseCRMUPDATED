@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="INNEASE.CRM/InnEase.WinForms.csproj" Id="a67eacb6-b3e2-4849-9f16-fb386ff039b0" />
+  <Project Path="InnEase.Domain/InnEase.Domain.csproj" Id="9b2d9966-bec3-48c1-8a37-c8b479228724" />
+  <Project Path="InnEase.Infrastructure/InnEase.Infrastructure.csproj" Id="d3a8f13b-ec1d-4d34-8a6c-5fae244ab604" />
+  <Project Path="InnEaseCRM.api/InnEaseCRM.api.csproj" Id="296b9ab2-aa02-40d1-8e12-ff22b6f138be" />
+</Solution>
